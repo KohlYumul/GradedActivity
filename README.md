@@ -18,7 +18,7 @@ Follow these steps to get the project up and running on your local machine.
 ### Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/KohlYumul/GradedActivity
 cd django_twitter
 
 ```
@@ -54,6 +54,7 @@ Click "Tweet" to post.
 
 4. View Tweets
 The home page (http://127.0.0.1:8000/) displays all tweets in reverse chronological order.
+
 
 
 
