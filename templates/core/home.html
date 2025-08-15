@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Django Twitter</title>
+</head>
+<body>
+    <h1>Welcome to Django Twitter!</h1>
+    {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }}! <a href="{% url 'logout' %}">Logout</a></p>
+        <p><a href="{% url 'tweet_create' %}">Create New Tweet</a></p>
+    {% else %}
+        <p><a href="{% url 'login' %}">Login</a> or <a href="{% url 'register' %}">Register</a></p>
+    {% endif %}
+
+    <h2>Latest Tweets</h2>
+    {% for tweet in tweets %}
+        <div>
+            <p><strong>@{{ tweet.user.username }}</strong> - {{ tweet.created_at }}</p>
+            <p>{{ tweet.text }}</p>
+            {% if tweet.image %}
+                <img src="{{ tweet.image.url }}" alt="Tweet Image" style="max-width: 300px;">
+            {% endif %}
+            <hr>
+        </div>
+    {% empty %}
+        <p>No tweets yet.</p>
+    {% endfor %}
+    
+    {% if user.is_authenticated %}
+    <p>Hello, {{ user.username }}! <a href="{% url 'logout' %}">Logout</a></p>
+{% endif %}
+</body>
+</html>
