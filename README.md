@@ -19,18 +19,25 @@ Follow these steps to get the project up and running on your local machine.
 
 ```bash
 git clone https://github.com/KohlYumul/GradedActivity
-cd django_twitter
+cd GradedActivity
+
+```
+### Run the Server
+
+```bash
+py manage.py runserver
 
 ```
 
-### Create a virtual environment
-python -m venv venv
+###Note
 
-### Activate the virtual environment
-### On Windows:
-.\venv\Scripts\activate
-### On macOS/Linux:
-source venv/bin/activate
+If error occurs on the first run, run this command
+
+```bash
+py manage.py makemigrations
+py manage.py migrate
+
+```
 
 ### How to Use
 1. Register an Account
@@ -54,6 +61,7 @@ Click "Tweet" to post.
 
 4. View Tweets
 The home page (http://127.0.0.1:8000/) displays all tweets in reverse chronological order.
+
 
 
 
