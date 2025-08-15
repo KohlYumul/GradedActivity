@@ -31,7 +31,7 @@ py manage.py runserver
 
 ###Note
 
-If error occurs on the first run, run this command
+If error occurs on the first run, run this command. Ctrl+C to stop before typing in the command
 
 ```bash
 py manage.py makemigrations
@@ -61,6 +61,7 @@ Click "Tweet" to post.
 
 4. View Tweets
 The home page (http://127.0.0.1:8000/) displays all tweets in reverse chronological order.
+
 
 
 
